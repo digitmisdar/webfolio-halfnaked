@@ -1,0 +1,116 @@
+
+$red: #941305;
+
+.container {
+  position: relative;
+  padding: 0 .5rem;
+  overflow: hidden;
+  font-family: Lower;
+}
+
+.topbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Upper;
+    font-weight: bold;
+    font-size: 18px;
+    
+    .menuButton {
+        position: relative;
+        z-index: 100;
+    }
+    
+    .menusClose,
+    .menusOpen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background-color: white;
+        width: 100vw;height: 95vh;
+        top: 0;right: -110vw;
+        list-style-type: none;
+        transition: .5s right;
+        
+        li {
+            margin: .5rem 0;
+        }
+        
+        li:hover {
+            color: $red;
+            border-bottom: 1px solid black;
+            font-size: 20px;
+        }
+    }
+    
+    .menusClose {
+        right: -.5rem;
+        z-index: 90;
+    }
+}
+
+.introduction {
+    display: inline;
+    font-family: Upper;
+    font-size: 25px;
+    font-weight: bold;color: black;
+    border-bottom: 3px solid $red;
+}
+
+.body1 {
+    margin-top: 15vh;
+    position: relative;
+    margin-left: clamp(20px, 600px, 10px);
+    padding-bottom: 4rem;
+    border-bottom: 1px solid black;
+    
+    .sociallink {
+        display: flex;
+        align-items: center;
+        width: 30vw;
+        
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Lower;
+            margin: 0 .3rem;
+            
+            img:hover {
+                background-color: $red;
+                border-radius: 999px;
+            }
+        }
+    }
+}
+
+.body2 {
+    margin-top: 15vh;
+    text-align: right;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid black;
+    
+    .projects {
+        margin-top: 10px;
+        
+        .project {
+            margin: 40px 0;
+            text-decoration: none;
+            color: black;
+            
+            h3 {
+                display: inline;
+                border-bottom: 2px solid $red;
+            }
+            
+            embed {
+                border: 1px dashed black;
+                margin-bottom: 30px;
+                width: 95vw;
+            }
+        }
+    }
+}

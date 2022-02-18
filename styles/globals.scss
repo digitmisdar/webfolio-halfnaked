@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Upper;
+    src: url('../public/fonts/Amatic.ttf');
+}
+
+@font-face {
+    font-family: Lower;
+    src: url('../public/fonts/Pompiere.otf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
