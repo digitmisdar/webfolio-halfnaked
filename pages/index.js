@@ -1,6 +1,4 @@
-
 import css from '../styles/Home.module.scss'
-import { useStore, withStore } from '../addons/allStates.js'
 import { useState, useEffect } from 'react'
 
 import useInView from 'react-cool-inview'
@@ -14,14 +12,14 @@ export default function Home() {
   function openMenu() {setMenu(evt => !evt)}
   
   useEffect(() => {
-    inView && setIsProjectsSeen(evt => true)
+    inView && setIsProjectsSeen(true)
   }, [inView])
   
   return (
 <div className={css.container}>
 
   <div className={css.topbar}>
-    <h3>Misdar</h3>
+    <h3>Half-Naked-WebFolio</h3>
     <img src={isMenuOpen ? '/close.svg' : '/menu.svg'} className={css.menuButton} width="30" height="30" onClick={openMenu}/>
     <div className={isMenuOpen ? css.menusClose :css.menusOpen}>
       <li>Beranda</li>
@@ -58,7 +56,10 @@ export default function Home() {
   </div>
   
   <div className={css.body3}>
-    End
+    <p className={css.introduction}>Keahlianku</p>
+    <p>
+      Beberapa keahlian yang telah kuperoleh dari pembelajaranku dintaranya:
+    </p>
   </div>
 </div>
   )

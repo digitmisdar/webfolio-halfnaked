@@ -4,13 +4,16 @@ $red: #941305;
 .container {
   position: relative;
   padding: 0 .5rem;
+  background-image: url('../public/bg-paper.png');
+  background-size: 100%;
+  background-repeat-x: no-repeat;
   overflow: hidden;
   font-family: Lower;
 }
 
 .topbar {
-    position: relative;
-    display: flex;
+    position: fixed;
+    display: flex;width: 95vw;
     align-items: center;
     justify-content: space-between;
     font-family: Upper;
@@ -60,12 +63,17 @@ $red: #941305;
     border-bottom: 3px solid $red;
 }
 
-.body1 {
+.body1,
+.body2,
+.body3 {
     margin-top: 15vh;
-    position: relative;
-    margin-left: clamp(20px, 600px, 10px);
     padding-bottom: 4rem;
     border-bottom: 1px solid black;
+}
+
+.body1 {
+    margin-top: 30vh;
+    margin-left: clamp(20px, 600px, 10px);
     
     .sociallink {
         display: flex;
@@ -88,10 +96,7 @@ $red: #941305;
 }
 
 .body2 {
-    margin-top: 15vh;
     text-align: right;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid black;
     
     .projects {
         margin-top: 10px;
@@ -110,6 +115,7 @@ $red: #941305;
                 border: 1px dashed black;
                 margin-bottom: 30px;
                 width: 95vw;
+                background-color: white;
             }
         }
     }
